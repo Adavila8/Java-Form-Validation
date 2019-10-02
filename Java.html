@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="CSS.css">
+<title>ISM4300 Customer Information</title>
+</head>
+<body>
+<h2 align="center"style= "color: blue,"> <strong><u>Customer Information</u></strong> </h2>
+
+<h3 style="color:pink;">Please put in your information: </h3>
+
+<form id=form1 action=" " onsubmit="return Java_ValidationForm()" method="post">
+Enter your First Name:
+<input type="text" name="First name" required>
+<br><br>
+</form>
+<form id=form1 action=" " onsubmit="return Java_ValidationForm()" method="post">
+Enter your Last Name:
+<input type="text" name="Last Name" required>
+<br><br>
+</form>
+
+</form>
+<form id=form1 action=" " onsubmit="return Java_ValidationForm()" method="post">
+Enter Your Email:
+<input type="text" name="Email" required>
+<br><br> 
+</form>
+<button type=“button” onclick=“Java_ValidationForm”>Submit</button>
+<script>
+	function Java_ValidationForm() {
+		var x = Customer_Information_GPF["form1"]["Firstname"].value;
+		var y = Customer_Information_GPF["form1"]["Lastname"].value;
+		var v = Customer_Information_GPF["form1"]["Email"].value;
+		if (x== "" || y== "" || v == "") {
+			alert("Please fill out your name.");
+			return false;
+		}
+	}
+</body>
+</html>
